@@ -53,34 +53,41 @@ body *, ::placeholder {
 */
 
 .backgroundFlash__5126c .message__5126c {
-    padding-bottom: 1%;
+    padding-bottom: 2%;
 }
 
 .backgroundFlash__5126c.groupStart__5126c {
-    margin-top: 2%;
+    margin-top: 6%;
 }
 
 .message__5126c.groupStart__5126c, .backgroundFlash__5126c.groupStart__5126c .message__5126c  {
-    margin-top: 10% !important;
+    margin-top: 14% !important;
+}
+
+.header_c19a55:has(.username_c19a55) {
+    text-shadow: 2px 0px 0px #000, -2px 0px 0px #000, 0px 2px 0px #000, 0px -2px 0px #000;
 }
 
 .messageListItem__5126c[data-is-self="false"] {
-    left: 5%;
     padding: 0.5% 0%;
     width: 50%;
-
+    overflow: visible !important;
+    .contents_c19a55 {
+        width: 240% !important;
+    }
     .messageContent_c19a55 {
         text-align: left;
-        width: 100%;
+        width: 70%;
         background: #000;
         padding: 2%;
         border: 2px #fff solid;
+        left: 10%;
         top: 15px;
         transform: rotate(3deg);
     }
     .avatar_c19a55 {
         top: -20px;
-        left: -2%;
+        left: 5%;
         width: 46px;
         height: 46px;
         box-sizing: border-box;
@@ -103,22 +110,22 @@ body *, ::placeholder {
 }
 
 .messageListItem__5126c[data-is-self="true"] {
-    right: -48%;
     padding: 0.5% 0%;
-    width: 50%;
-
+    width: 100%;
+    overflow: visible !important;
     .messageContent_c19a55 {
         text-align: left;
-        width: 100%;
+        width: 60% !important;
         background: #000;
         padding: 2%;
         border: 2px #fff solid;
+        right: -50%;
         top: 15px;
         transform: rotate(-3deg);
     }
     .avatar_c19a55 {
         top: -20px;
-        left: 36%;
+        left: 70%;
         width: 46px;
         height: 46px;
         box-sizing: border-box;
@@ -141,6 +148,7 @@ body *, ::placeholder {
 }
 
 .systemMessage__5126c {
+    width: 100% !important;
     .messageContent_c19a55 {
         width: 100% !important;
         text-align: center !important;
