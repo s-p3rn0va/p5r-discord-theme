@@ -1,0 +1,17 @@
+/**
+ * @name P5R
+ * @author ennesis
+ * @version 2.0
+ * @description Talk to confidants in Style like a true Phantom Thief.
+*/
+
+@import url("https://ennesis.github.io/p5r-discord-theme/persona.css");
+
+:root {
+    --p5-basic-black: #000;
+    --p5-basic-white: #fff;
+    --p5-basic-red: #f00;
+    --p5-msg-bg: #555;
+    --p5-members-bg: #f00;
+    --p5-app-background: #000;
+}
