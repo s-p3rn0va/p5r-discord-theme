@@ -17,6 +17,16 @@
 }
 
 :root {
+    /* font selection */
+    --p5-main-font: "optima";
+    --p5-username-font: "shoplifter";
+    --p5-members-font: "ransom";
+    /* font size adjustment */
+    --p5-username-font-size: 2em;
+    --p5-members-font-size: 2em;
+    /* size adjustment */
+    --p5-message-size: 400px;
+    /* colors */
     --p5-basic-black: #000;
     --p5-basic-white: #fff;
     --p5-basic-red: #f00;
@@ -28,12 +38,27 @@
 }
 
 body *, ::placeholder {
-    font-family: "optima" !important;
+    font-family: var(--p5-main-font) !important;
 }
 
 .guilds__5e434 {
     width: 100px;
+    background-color: var(--p5-basic-black);
     /*transform: rotate(-3deg) translate3d(15px,0px,0px);*/
+}
+
+.selected__6e9f8 {
+    .childWrapper__6e9f8 {
+        background-color: var(--p5-basic-red) !important;
+    }
+}
+
+.wrapper__58105 {
+    transform: translate3d(-15px,0px,0px) !important;
+}
+
+.stack_dbd263 {
+    align-items: center !important;
 }
 
 .sidebarList__5e434 {
@@ -51,8 +76,8 @@ body *, ::placeholder {
     overflow: visible scroll !important;
 }
 .membersGroupHeader_c8ffbb > span {
-    font-family: "ransom" !important;
-    font-size: 2em;
+    font-family: var(--p5-members-font) !important;
+    font-size: var(--p5-members-font-size);
     text-shadow: 2px 0px 2px var(--p5-basic-black), -2px 0px 2px var(--p5-basic-black), 0px 2px 2px var(--p5-basic-black), 0px -2px 2px var(--p5-basic-black);
     color: var(--p5-basic-white);
 }
@@ -139,10 +164,17 @@ body *, ::placeholder {
 .chatGradient__36d07 {
     visibility: hidden;
 }
+.chatTypingGradientNotAtBottom__36d07 {
+    visibility: hidden !important;
+}
+.chatGradientBase__36d07 {
+    visibility: hidden !important;
+}
 
 .channelTextArea_f75fb0 {
+    width: 90%;
     border-radius: 0px;
-    transform: rotate(-1deg);
+    transform: rotate(-1deg) translate3d(-10px,-20px,0px);
     background: var(--p5-basic-white);
     > div {
         border-radius: 0px;
@@ -151,26 +183,49 @@ body *, ::placeholder {
 }
 
 .header_c19a55 {
-    /*transform: ;*/
+    text-shadow: 2px 0px 0px #000, -2px 0px 0px #000, 0px 2px 0px #000, 0px -2px 0px #000;
+    transform: translate3d(-70px,-5px,0px);
+    overflow: visible !important;
+    .username_c19a55 {
+        font-family: var(--p5-username-font) !important;
+        font-size: var(--p5-username-font-size);
+    }
 }
 
 .messageListItem__5126c {
-    /*width: 400px;*/
+    padding: 15px 0px 15px 0px;
     .contents_c19a55 {
-        
+        padding: 0px 0px 0px 75px;
     }
-    .messageContent_c19a55 {
-
+    .repliedMessageClickableSpine_c19a55 {
+        color: var(--p5-basic-white) !important;
+    }
+    .repliedMessage_c19a55 {
+        width: fit-content;
+        padding: 10px;
+        border: #fff 1px solid;
+        background-color: var(--p5-basic-black);
+        transform: rotate(-2deg) translate3d(0px,-15px,0px);
+    }
+    .messageContent_c19a55:not(.repliedTextContent_c19a55) {
+        width: var(--p5-message-size);
+        padding: 15px;
+        border: #fff 2px solid;
+        background-color: var(--p5-basic-black);
+        transform: rotate(2deg) translate3d(0px,5px,0px);
     }
     .avatar_c19a55 {
         border-radius: 0px;
         border: 2px var(--p5-basic-white) solid;
         background: var(--p5-basic-black);
-        transform: skew(-5deg) rotate(8deg);
+        transform: skew(-5deg) rotate(8deg) translate3d(0px,-15px,0px);
     }
-
     .avatarDecoration_c19a55 {
-
+        
+    }
+    .reactions__23977 {
+        width: fit-content;
+        transform: rotate(5deg);
     }
 }
 
@@ -184,6 +239,24 @@ body *, ::placeholder {
 
 .message__5126c.groupStart__5126c, .backgroundFlash__5126c.groupStart__5126c .message__5126c  {
     margin-top: 50px !important;
+}
+
+.systemMessage__5126c {
+
+}
+
+.typing_b88801 {
+    transform: rotate(1deg) translate3d(0px,-10px,0px);
+}
+
+
+/* plugin stuff */
+
+.vc-membercount-widget {
+    transform: rotate(-5deg) translate3d(-50px,-10px,0px);
+    .vc-membercount-container:has(.vc-membercount-voice-icon) {
+        transform: translate3d(-75px,20px,0px);
+    }
 }
 
 /*
